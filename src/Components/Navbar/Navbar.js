@@ -3,16 +3,23 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div>
+    <div className='navbar-container'>
       <h1> Hunter Times</h1>
-      <Link to="/">
-        Home
-      </Link>
-    
-      <Link to="e">sports</Link>
-      <Link to="e">world </Link>
-      <Link to="e">stuff</Link>
-    </div>
+      <div className="links">
+        <Link className="link-text" to="/">
+          Home
+        </Link>
+        <Link className="link-text" to="/sports">
+          Sports
+        </Link>
+        <Link className="link-text" to="e">
+          World{' '}
+        </Link>
+        <Link className="link-text" to="e">
+          Stuff
+        </Link>
+      </div>
+    </div> 
   );
 }
 

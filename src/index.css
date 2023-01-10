@@ -5,6 +5,7 @@
   width: 40%;
   height: 50%;
   margin: 2%;
+  color: black;
 }
 
 .article-card-container {
@@ -12,3 +13,20 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.link-text{
+  text-decoration: none; 
+  color: black;
+  text-decoration: underline;
+}
+.links{
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+.card-link{
+  text-decoration: none;
+}
+/* .navbar-container{
+  border: 2px solid black;
+} */

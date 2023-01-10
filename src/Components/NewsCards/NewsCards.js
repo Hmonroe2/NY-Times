@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function NewsCards({title, image, abstract}) {
+function NewsCards({title, image, abstract,byline, id}) {
   return (
-    <article className='article-container'>
+  <Link className='article-container'to={id}> 
+    <article className='' key={id} id={id}>
       <img src={image} /> 
       <h2> {title} </h2>
-      <p>{ abstract}</p>
+      {/* <p>{abstract}</p>
+      <p>{byline}</p> */}
     </article>
+  </Link>
   )
 }
 

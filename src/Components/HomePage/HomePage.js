@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsCards from '../NewsCards/NewsCards';
+import Navbar from '../Navbar/Navbar';
 
 function HomePage({ articles }) {
   const displayNews = () => {
@@ -7,9 +8,12 @@ function HomePage({ articles }) {
       return <p> loading... </p>;
     } else {
       return articles.map((article) => {
+        console.log(article)
         return (
           <NewsCards
-          title={'hello'}
+            title={article.title}
+            image={article.multimedia[2].url}
+            abstract={article.abstract}
           />
         );
       });
@@ -17,8 +21,8 @@ function HomePage({ articles }) {
   }
     return (
       <div>
-        <h1> Hunter Times </h1> 
-        <section className='article-card-container' > {displayNews()}</section>
+        <Navbar /> 
+        <section className='article-card-container'> {displayNews()}</section>
       </div>
     );
   };

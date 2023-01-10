@@ -9,7 +9,7 @@ function HomePage({ articles }) {
       return articles.map((article) => {
         return (
           <NewsCards
-          title={article.title}
+          title={'hello'}
           />
         );
       });
@@ -17,6 +17,7 @@ function HomePage({ articles }) {
   }
     return (
       <div>
+        <h1> Hunter Times </h1> 
         <section className='article-card-container' > {displayNews()}</section>
       </div>
     );

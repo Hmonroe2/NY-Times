@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Navbar({ filter, data }) {
   let today = new Date().toLocaleDateString();
@@ -18,17 +17,23 @@ function Navbar({ filter, data }) {
           {but}{' '}
         </button>
       );
-    })
+    });
     return data;
   };
 
   return (
     <div className="navbar-container">
       <a href="/">
-        <h1> Hunter Times</h1>
+        <h1 className="page-title"> Hunter Times</h1>
       </a>
+      <h2> Todays's Date</h2>
       <h2> {today}</h2>
-      <div className="links">{newButtons()}</div>
+      <div className="links">
+        {newButtons()}
+        <a href="/">
+          <button className="category-buttons"> View all Stories</button>
+        </a>
+      </div>
     </div>
   );
 }

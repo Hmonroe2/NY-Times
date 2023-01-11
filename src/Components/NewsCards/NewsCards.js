@@ -1,15 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function NewsCards({title, image, abstract,byline, id}) {
+function NewsCards({title, image, id}) {
 
   return (
   <NavLink className='article-container'to={`/${id}`}> 
     <article className='' key={id} id={id}>
-      <img src={image} /> 
+        <img src={image} alt={ title } /> 
       <h2> {title} </h2>
-      {/* <p>{abstract}</p>
-      <p>{byline}</p> */}
     </article>
   </NavLink>
   )

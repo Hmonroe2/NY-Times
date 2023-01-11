@@ -6,10 +6,14 @@ function Navbar({ filter }) {
 
   return (
     <div className="navbar-container">
-      <h1> Hunter Times</h1>
+      <Link to='/'>
+        <h1> Hunter Times</h1>
+      </Link> 
       <h2> {today}</h2>
       <div className="links">
-        <button className="link-text">Home</button>
+        <Link className="link-text" to="/">
+          Home
+        </Link>
         <button className="link-text">Sports</button>
         <Link className="link-text" to="e">
           World{' '}

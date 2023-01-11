@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Details() {
+function Details({ data }) {
+  console.log(data)
   return (
-    <div>
-      
+    <div className='details-container'>
+      <h3> {data.title}</h3>
+      <img src={data.multimedia[1].url}/> 
     </div>
   )
 }

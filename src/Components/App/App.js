@@ -12,9 +12,15 @@ function App() {
   const [data, setData] = useState('');
   const [error, setError] = useState('')
 
+  console.log(article)
+
   useEffect(() => {
     getNewsData('home').then((data) => {
-      setArticle(data.results);
+      const addedID = data.results.map((result , index) => ({
+        ...result,  
+        id: index++
+      }))
+      setArticle(addedID);
     })
     .then((error) => {
       setError(error)
@@ -25,15 +31,24 @@ function App() {
     
     console.log(category);
   };
-  console.log(data);
+  
+
+  const findArticle = (id) => {
+    let newId = parseInt(id)
+    let articleDetails = article.find((article) => {
+      return article.id === newId
+    })
+    // console.log(articleDetails)
+    return articleDetails
+  }
 
   return (
     <section className="App">
       <Navbar filter={filterResultsByCategory} />
       <Switch>
         <Route exact path="/" render={() => <HomePage articles={article} />} />
-        <Route path="/details/:id" render={({match}) => {
-          <Details /> 
+        <Route path="/:id" render={({ match }) => {
+          return <Details data={findArticle(match.params.id)}  /> 
         }}/>
       </Switch>
     </section>

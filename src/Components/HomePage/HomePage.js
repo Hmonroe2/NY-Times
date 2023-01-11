@@ -13,7 +13,7 @@ function HomePage({ articles }) {
         return (
           <NewsCards
             key={article.short_url}
-            id={article.short_url}
+            id={article.id}
             title={article.title}
             image={article.multimedia[2].url}
             abstract={article.abstract}

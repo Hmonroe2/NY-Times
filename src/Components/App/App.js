@@ -9,9 +9,7 @@ import Details from '../Details/Details';
 function App() {
   const [article, setArticle] = useState([]);
   const [categorizedArticle, setCategorizedArticle] = useState([]);
-  const [data, setData] = useState('');
   const [error, setError] = useState('');
-
 
   useEffect(() => {
     getNewsData('home')
@@ -27,8 +25,6 @@ function App() {
       });
   }, []);
 
- 
-
   const filterResultsByCategory = (category) => {
     const specificCategory = article.filter((art) => {
       return art.section === category;
@@ -36,22 +32,18 @@ function App() {
     setCategorizedArticle(specificCategory);
   };
 
-
   const findArticle = (id) => {
     let newId = parseInt(id);
     let articleDetails = article.find((article) => {
       return article.id === newId;
     });
-
     return articleDetails;
   };
+  
   const navbarButtons = () => {
     let buttonData = article.map((articles) => articles.section);
     return buttonData;
   };
-  // const returnHome = () => {
-  //   setCategorizedArticle([])
-  // }
 
   return (
     <section className="App">

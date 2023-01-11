@@ -6,9 +6,7 @@ function HomePage({ articles, category }) {
   let data = articles;
   if (category.length > 0) {
    data =  category
-  } else {
-    data = articles
- }
+  } 
 
   const displayNews = () => {
     if (!data) {
@@ -30,6 +28,7 @@ function HomePage({ articles, category }) {
   };
   return (
     <div>
+      <p className='top-stories'> Today's Top Stories </p> 
       <section className="article-card-container"> {displayNews()}</section>
     </div>
   );

@@ -1,11 +1,12 @@
 
-
 .article-container {
-  border: 2px solid red;
+  border: 4px solid black;
   width: 40%;
   height: 50%;
   margin: 2%;
   color: black;
+  contain: content;
+  border-radius: 2%;
 }
 
 .article-card-container {
@@ -30,3 +31,8 @@
 /* .navbar-container{
   border: 2px solid black;
 } */
+.details-container{
+  margin-top: 5%;
+  border: 3px solid blue ;
+  contain: content;
+}

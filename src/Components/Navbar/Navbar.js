@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ filter }) {
+  let today = new Date().toLocaleDateString();
+
   return (
-    <div className='navbar-container'>
-      <h1> Hunter Times</h1>
+    <div className="navbar-container">
+      <Link to='/'>
+        <h1> Hunter Times</h1>
+      </Link> 
+      <h2> {today}</h2>
       <div className="links">
         <Link className="link-text" to="/">
           Home
         </Link>
-        <Link className="link-text" to="/sports">
-          Sports
-        </Link>
+        <button className="link-text">Sports</button>
         <Link className="link-text" to="e">
           World{' '}
         </Link>
@@ -19,7 +22,7 @@ function Navbar() {
           Stuff
         </Link>
       </div>
-    </div> 
+    </div>
   );
 }
 

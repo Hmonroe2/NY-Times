@@ -1,15 +1,20 @@
 import React from 'react';
 import NewsCards from '../NewsCards/NewsCards';
-import Navbar from '../Navbar/Navbar';
 
-function HomePage({ articles }) {
-  let timestamp = Date.now();
-  console.log(new Date(timestamp));
+
+function HomePage({ articles, category }) {
+  let data = articles;
+  if (category.length > 0) {
+   data =  category
+  } else {
+    data = articles
+ }
+
   const displayNews = () => {
-    if (!articles) {
+    if (!data) {
       return <p> loading... </p>;
     } else {
-      return articles.map((article) => {
+      return data.map((article) => {
         return (
           <NewsCards
             key={article.short_url}
@@ -17,18 +22,17 @@ function HomePage({ articles }) {
             title={article.title}
             image={article.multimedia[2].url}
             abstract={article.abstract}
-            byline= {article.byline}
+            byline={article.byline}
           />
         );
       });
     }
-  }
-    return (
-      <div>
-        {/* <Navbar />  */}
-        <section className='article-card-container'> {displayNews()}</section>
-      </div>
-    );
   };
+  return (
+    <div>
+      <section className="article-card-container"> {displayNews()}</section>
+    </div>
+  );
+};
 
 export default HomePage;

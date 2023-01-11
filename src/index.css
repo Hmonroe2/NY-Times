@@ -22,7 +22,8 @@
 }
 .links{
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 2px solid black;
 }
 .card-link{
@@ -36,3 +37,7 @@
   border: 3px solid blue ;
   contain: content;
 }
+.category-buttons{
+  margin: 1%;
+}
+

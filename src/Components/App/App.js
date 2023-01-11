@@ -4,52 +4,72 @@ import { useEffect, useState } from 'react';
 import HomePage from '../HomePage/HomePage';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import Details from '../Details/Details'
+import Details from '../Details/Details';
 
 function App() {
   const [article, setArticle] = useState([]);
   const [categorizedArticle, setCategorizedArticle] = useState([]);
   const [data, setData] = useState('');
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
 
-  console.log(article)
 
   useEffect(() => {
-    getNewsData('home').then((data) => {
-      const addedID = data.results.map((result , index) => ({
-        ...result,  
-        id: index++
-      }))
-      setArticle(addedID);
-    })
-    .then((error) => {
-      setError(error)
-    })
+    getNewsData('home')
+      .then((data) => {
+        const addedID = data.results.map((result, index) => ({
+          ...result,
+          id: index++,
+        }));
+        setArticle(addedID);
+      })
+      .then((error) => {
+        setError(error);
+      });
   }, []);
 
+ 
+
   const filterResultsByCategory = (category) => {
-    
-    console.log(category);
+    const specificCategory = article.filter((art) => {
+      return art.section === category;
+    });
+    setCategorizedArticle(specificCategory);
   };
-  
+
 
   const findArticle = (id) => {
-    let newId = parseInt(id)
+    let newId = parseInt(id);
     let articleDetails = article.find((article) => {
-      return article.id === newId
-    })
-    // console.log(articleDetails)
-    return articleDetails
-  }
+      return article.id === newId;
+    });
+
+    return articleDetails;
+  };
+  const navbarButtons = () => {
+    let buttonData = article.map((articles) => articles.section);
+    return buttonData;
+  };
+  // const returnHome = () => {
+  //   setCategorizedArticle([])
+  // }
 
   return (
     <section className="App">
-      <Navbar filter={filterResultsByCategory} />
+      <Navbar filter={filterResultsByCategory} data={navbarButtons()}  />
       <Switch>
-        <Route exact path="/" render={() => <HomePage articles={article} />} />
-        <Route path="/:id" render={({ match }) => {
-          return <Details data={findArticle(match.params.id)}  /> 
-        }}/>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <HomePage articles={article} category={categorizedArticle} />
+          )}
+        />
+        <Route
+          path="/:id"
+          render={({ match }) => {
+            return <Details data={findArticle(match.params.id)} />;
+          }}
+        />
       </Switch>
     </section>
   );

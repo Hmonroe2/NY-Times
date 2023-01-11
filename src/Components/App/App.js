@@ -39,7 +39,7 @@ function App() {
     });
     return articleDetails;
   };
-  
+
   const navbarButtons = () => {
     let buttonData = article.map((articles) => articles.section);
     return buttonData;
@@ -62,6 +62,8 @@ function App() {
             return <Details data={findArticle(match.params.id)} />;
           }}
         />
+        <Route 
+          render={<p> There was an error</p>} /> 
       </Switch>
     </section>
   );

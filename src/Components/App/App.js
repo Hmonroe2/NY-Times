@@ -1,5 +1,5 @@
 import './App.css';
-import getNewsData from '../../apiCalls';
+import { getNewsData } from '../../apiCalls';
 import { useEffect, useState } from 'react';
 import HomePage from '../HomePage/HomePage';
 import { Route, Switch } from 'react-router-dom';

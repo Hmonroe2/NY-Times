@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsCards from '../NewsCards/NewsCards';
+import defaultImage from '../../Images/default-image.jpeg'
 
 
 function HomePage({ articles, category }) {
@@ -7,7 +8,7 @@ function HomePage({ articles, category }) {
   if (category.length > 0) {
    data =  category
   } 
-
+ 
   const displayNews = () => {
     if (!data) {
       return <p> loading... </p>;
@@ -18,7 +19,7 @@ function HomePage({ articles, category }) {
             key={article.short_url}
             id={article.id}
             title={article.title}
-            image={article.multimedia[2].url}
+            image={!article.multimedia ? defaultImage : article.multimedia[2].url}
             abstract={article.abstract}
             byline={article.byline}
           />

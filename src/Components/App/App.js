@@ -62,8 +62,6 @@ function App() {
             return <Details data={findArticle(match.params.id)} />;
           }}
         />
-        <Route 
-          render={<p> There was an error</p>} /> 
       </Switch>
     </section>
   );

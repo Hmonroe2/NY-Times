@@ -11,20 +11,24 @@
   - [Project Specs](#project-specs)
   - [Set Up](#set-up)
 ## Introduction
-  - This app is 
-  [Wizzy-Eats](https://wizzy-eats-ui.vercel.app/)
-  [Wizzy-Eats-API](https://wizzy-eats-8blq1crey-hmonroe2.vercel.app/restaurants)
-  [Wizzy-Eats-API-Repo](https://github.com/Hmonroe2/Wizzy-eats-api)
+  - This app uses the NYTimes API in order to make a site that you can come to for your daily news. The site allows users to see all the top stories from the day. A user can filter through the category of their choosing and view all article related to that category. A user can then see more details on the article and they have the option to view the article on the 
+  [Hunter Times Repo]()
 ## Technologies
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ## Illustrations
 
-
 ## Features
-  - This application features a fully functional restaurant app. The App allows user to get a random restaurant by the click of a button. They can also filter the results based on their location. They user can click on a restaurant card and be taken to the restaurants details. A user can generate a random restaurant by the click of a button. 
+  - As, a user, I should be able to navigate to a home page, 
+  and view a list of todays top stories.
+  - As a user, I should be able to click a story and be taken to 
+  more details about the article. 
+  - As a user, I should be able to be redirected to NY times to read
+  the full article. 
+  - As a user, I should be able to filter the articles by topic from 
+  the buttons at the top. 
 ## Possible Future Extensions
-  - Future extension would allow the user to add their own restaurants. 
+  - Future extension would be testing the application using cypress.  
   - Future extension would change the Navbar to have hamburger icon when it is in mobile view. 
 
 ## Sources
@@ -39,7 +43,7 @@
 ## Github
   - Hunter Monroe: https://github.com/Hmonroe2
 ## Project Specs
- - [Turing](https://frontend.turing.edu/projects/module-3/showcase.html)
+ - [Turing](https://mod4.turing.edu/projects/take_home/take_home_fe)
 ## Setup
 After one person has gone through the steps of cloning down this repo and editing the remote, everyone should clone down the repo.
 

@@ -4,6 +4,7 @@ import defaultImage from '../../Images/default-image.jpeg'
 
 
 function HomePage({ articles, category }) {
+  console.log(articles)
   let data = articles;
   if (category.length > 0) {
    data =  category
@@ -22,6 +23,7 @@ function HomePage({ articles, category }) {
             image={!article.multimedia ? defaultImage : article.multimedia[2].url}
             abstract={article.abstract}
             byline={article.byline}
+            section={article.section}
           />
         );
       });

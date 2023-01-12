@@ -4,7 +4,6 @@ import defaultImage from '../../Images/default-image.jpeg'
 
 
 function HomePage({ articles, category }) {
-  console.log(articles)
   let data = articles;
   if (category.length > 0) {
    data =  category

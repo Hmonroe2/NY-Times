@@ -41,11 +41,12 @@
   - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)
   - [CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 ## Contributors
-  - Hunter Monroe
-## LinkedIn Profiles
-  - Hunter Monroe: https://www.linkedin.com/in/hunter-monroe-035ab0188/
-## Github
-  - Hunter Monroe: https://github.com/Hmonroe2
+<h3>Hunter Monroe</h3>
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hmonroe2/)
+
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hunter-monroe-035ab0188/)
+
 ## Project Specs
  - [Turing](https://mod4.turing.edu/projects/take_home/take_home_fe)
 ## Setup

@@ -5,16 +5,16 @@ function Navbar({ filter, data }) {
   let buttonData = [...new Set(data)];
 
   const newButtons = () => {
-    let data = buttonData.map((but, index) => {
+    let data = buttonData.map((category, index) => {
       return (
         <button
           key={index}
           onClick={() => {
-            filter(but);
+            filter(category);
           }}
           className="category-buttons">
           {' '}
-          {but}{' '}
+          {category}{' '}
         </button>
       );
     });

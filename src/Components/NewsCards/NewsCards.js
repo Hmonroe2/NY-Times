@@ -8,7 +8,7 @@ function NewsCards({title, image, id, section}) {
       <article className='' key={id} id={id}>
         <p> {section.toUpperCase() }</p>
         <img src={image} alt={ title } /> 
-      <h2> {title} </h2>
+      <h2 className='card-title'> {title} </h2>
     </article>
   </NavLink>
   )

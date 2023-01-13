@@ -46,8 +46,9 @@
   - Future extension would change the Navbar to have hamburger icon when it is in mobile view. 
 
 ## Sources
-![Screen Shot 2023-01-12 at 10 48 49 AM](https://user-images.githubusercontent.com/102885322/212141454-1eebe634-4c9f-4e21-8f8a-69d8e3715a56.png)
-  - [WireFrame] (https://app.excalidraw.com/s/AsEhZ7AUEaU/9lNRDS6e7DD)
+<img width="761" alt="Screen Shot 2023-01-13 at 9 35 55 AM" src="https://user-images.githubusercontent.com/102885322/212371861-ed2e5b95-dff2-45db-bbc9-8d7dad3abf2d.png">
+
+  - [WireFrame](https://app.excalidraw.com/s/AsEhZ7AUEaU/9lNRDS6e7DD)
   - [MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
   - [YouTube](https://www.youtube.com/watch?v=K0KQP7qfrYo)
   - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset)
